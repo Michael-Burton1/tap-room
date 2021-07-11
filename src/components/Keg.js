@@ -21,7 +21,7 @@ Keg.propTypes = {
   type: PropTypes.string,
   remaining: PropTypes.number,
   id: PropTypes.string,
-  whenTicketClicked: PropTypes.func
+  whenKegClicked: PropTypes.func
 };
 
-export default Ticket;
+export default Keg;

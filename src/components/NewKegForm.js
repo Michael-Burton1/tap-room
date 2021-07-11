@@ -1,13 +1,13 @@
 import React from "react";
 import { v4 } from 'uuid';
 import PropTypes from "prop-types";
-import ReusableForm from "./ReusableForm";
+import ReusableForm from "./ReuseableForm";
 
 function NewKegForm(props) {
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewTicketCreation({ name: event.target.name.value, typeof: event.target.type.value, abv: event.target.abv.value, id: v4() });
+    props.onNewKegCreation({ name: event.target.name.value, typeof: event.target.type.value, abv: event.target.abv.value, id: v4() });
   }
 
   return (

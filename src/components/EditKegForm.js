@@ -1,9 +1,9 @@
 import React from "react";
-import ReusableForm from "./ReusableForm";
+import ReusableForm from "./ReuseableForm";
 import PropTypes from "prop-types";
 
 function EditKegForm(props) {
-  const { ticket } = props;
+  const { keg } = props;
 
   function handleEditKegFormSubmission(event) {
     event.preventDefault();
