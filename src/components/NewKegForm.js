@@ -7,7 +7,7 @@ function NewKegForm(props) {
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({ name: event.target.name.value, typeof: event.target.type.value, abv: event.target.abv.value, id: v4() });
+    props.onNewKegCreation({ name: event.target.name.value, beerType: event.target.beerType.value, abv: event.target.abv.value, id: v4() });
   }
 
   return (
