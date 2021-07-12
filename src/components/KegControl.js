@@ -65,28 +65,28 @@ class KegControl extends React.Component {
     });
   }
 
-  handleSellKeg = (id) => {
-    const selectedKeg = this.state.masterKegList.filter(
-      (keg) => keg.id === id
-    )[0];
-    if (selectedKeg.remaining > 0) {
-      selectedKeg.remaining -= 1;
-    } else {
-      selectedKeg.amountLeft = "This Keg is Tapped!";
-    }
-    this.setState({ selectedKeg: selectedKeg });
-  };
-  // handelSellBeer = (id) => {
+  // handleSellKeg = (id) => {
   //   const selectedKeg = this.state.masterKegList.filter(
   //     (keg) => keg.id === id
   //   )[0];
   //   if (selectedKeg.remaining > 0) {
   //     selectedKeg.remaining -= 1;
   //   } else {
-  //     selectedKeg.remaining = "This keg is tapped!"
+  //     selectedKeg.remaining = "This Keg is Tapped!";
   //   }
   //   this.setState({ selectedKeg: selectedKeg });
   // };
+  handelSellBeer = (id) => {
+    const selectedKeg = this.state.masterKegList.filter(
+      (keg) => keg.id === id
+    )[0];
+    if (selectedKeg.remaining > 0) {
+      selectedKeg.remaining -= 1;
+    } else {
+      selectedKeg.remaining = "This keg is tapped!"
+    }
+    this.setState({ selectedKeg: selectedKeg });
+  };
 
   render() {
     let currentlyVisibleState = null;
@@ -99,6 +99,7 @@ class KegControl extends React.Component {
         <KegDetail
           keg={this.state.selectedKeg}
           onClickingDelete={this.handleDeletingKeg}
+          onClickingSell={this.handelSellBeer}
           onClickingEdit={this.handleEditClick} />
       buttonText = "Return to List of Kegs";
     } else if (this.state.formVisibleOnPage) {
