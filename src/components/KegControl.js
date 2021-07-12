@@ -65,17 +65,29 @@ class KegControl extends React.Component {
       selectedKeg: null
     });
   }
-  handelSellBeer = (id) => {
+
+  handleSellBeer = (id) => {
     const selectedKeg = this.state.masterKegList.filter(
       (keg) => keg.id === id
     )[0];
     if (selectedKeg.remaining > 0) {
       selectedKeg.remaining -= 1;
     } else {
-      selectedKeg.remaining = "This keg is tapped!"
+      selectedKeg.amountLeft = "This Keg is Tapped!";
     }
     this.setState({ selectedKeg: selectedKeg });
   };
+  // handelSellBeer = (id) => {
+  //   const selectedKeg = this.state.masterKegList.filter(
+  //     (keg) => keg.id === id
+  //   )[0];
+  //   if (selectedKeg.remaining > 0) {
+  //     selectedKeg.remaining -= 1;
+  //   } else {
+  //     selectedKeg.remaining = "This keg is tapped!"
+  //   }
+  //   this.setState({ selectedKeg: selectedKeg });
+  // };
 
   render() {
     let currentlyVisibleState = null;
