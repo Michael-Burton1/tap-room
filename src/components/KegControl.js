@@ -5,7 +5,6 @@ import KegDetail from './KegDetail';
 import EditKegForm from './EditKegForm';
 
 class KegControl extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -66,7 +65,7 @@ class KegControl extends React.Component {
     });
   }
 
-  handleSellBeer = (id) => {
+  handleSellKeg = (id) => {
     const selectedKeg = this.state.masterKegList.filter(
       (keg) => keg.id === id
     )[0];
