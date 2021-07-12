@@ -7,7 +7,12 @@ function EditKegForm(props) {
 
   function handleEditKegFormSubmission(event) {
     event.preventDefault();
-    props.onEditKeg({ name: event.target.name.value, beerType: event.target.beerType.value, abv: event.target.abv.value, remaining: event.target.remaining.value, id: keg.id });
+    props.onEditKeg({
+      name: event.target.name.value,
+      beerType: event.target.beerType.value,
+      abv: event.target.abv.value,
+      id: keg.id
+    });
   }
 
   return (
