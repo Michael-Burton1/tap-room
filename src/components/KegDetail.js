@@ -16,7 +16,7 @@ function KegDetail(props) {
         {" "}
         Take one down, Pass it around
       </button>
-
+      {/* <button onClick={onClickingSell}>Just Fucking WORK!!!</button> */}
       <hr />
     </React.Fragment>
   );
@@ -26,7 +26,7 @@ KegDetail.propTypes = {
   keg: PropTypes.object,
   onClickingDelete: PropTypes.func,
   onClickingEdit: PropTypes.func,
-  onClickingSell: PropTypes.func
+  onClickingSell: PropTypes.func,
 };
 
 export default KegDetail;
